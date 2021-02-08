@@ -1,15 +1,16 @@
 package com.example.demo.userFeatureAccess.model;
+import javax.persistence.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
 @Table
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="Id")
+    private Long id;
+
     @Column(name="Email")
     private String email;
 
@@ -18,6 +19,15 @@ public class User {
 
     @Column(name="Enable")
     private Boolean enable;
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getFeatureName() {
         return featureName;

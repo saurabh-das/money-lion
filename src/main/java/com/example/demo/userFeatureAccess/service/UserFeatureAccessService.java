@@ -12,8 +12,6 @@ import java.util.regex.Pattern;
 @Service
 public class UserFeatureAccessService implements IUserFeatureAccess {
 
-
-
     @Autowired
     private UserFeatureRepository userFeatureRepository;
 
